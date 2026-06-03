@@ -1,3 +1,3 @@
 #!/bin/bash
 movies=(court bahubali pushpa)
-echo "movies[0]"
+echo "$movies[0]"
