@@ -11,9 +11,9 @@ LOG_FILE="$log_folder/$name.log"
 
 if [ $userid -ne 0 ]
 then 
-  echo "$R Error: $N you should run this script with root access" | tee -a $LOG_FILE
+  echo -e "$R Error: $N you should run this script with root access" | tee -a $LOG_FILE
   exit 1
 else
-  echo "$G you are running with root access $N" | tee -a $LOG_FILE
+  echo -e "$G you are running with root access $N" | tee -a $LOG_FILE
   exit 1
 fi
