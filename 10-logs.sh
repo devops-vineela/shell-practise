@@ -6,8 +6,8 @@ N="\e[0m"
 userid=$(id -u)
 mkdir -p /var/log/shell-script-logs
 log_folder="/var/log/shell-script-logs"
-script-name=$(echo $0 |cut -d "." -f1)
-log-file=$log_folder/${script-name}.log
+name=$(echo $0 |cut -d "." -f1)
+log-file=$log_folder/$name.log
 
 if [ $userid -ne 0 ]
 then 
