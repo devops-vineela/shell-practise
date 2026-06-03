@@ -5,4 +5,6 @@ Y="\e[33m"
 N="\e[0m"
 
 echo -e "$R red colour text $N"
+echo -e "$G green colour text $N"
+echo -e "$Y yellow colour text $N"
 echo "check completed"
