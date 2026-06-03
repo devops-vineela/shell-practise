@@ -1,5 +1,6 @@
 #!/bin/bash
-number=10
+echo "Enter a number"
+read -s number
 if [ $number -lt 100 ]
 then
   echo "number is less than 100"
