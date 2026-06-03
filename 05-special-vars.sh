@@ -7,4 +7,5 @@ echo "user name who is running this script: $USER"
 echo "PID of this current script: $$"
 echo "present working directory: $PWD"
 echo " previous command response is $?"
+sleep 10 &
 echo "PID of last command running in background: $!"
