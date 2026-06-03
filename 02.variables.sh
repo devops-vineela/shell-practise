@@ -1,4 +1,6 @@
 #!/bin/bash
-person1=$1
-person2=$2
+echo "Enter first person name"
+read person1
+echo "Enter second person name"
+read person2
  echo "$person1 and $person2 are good friends"
