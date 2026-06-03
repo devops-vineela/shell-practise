@@ -9,5 +9,5 @@ validate(){
     fi
 }
 
-dnf install nginx -y
+dnf install nginxxxxx -y
 validate $? "installing nginxxx"
