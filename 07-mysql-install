@@ -1,0 +1,8 @@
+#!/bin/bash
+user=$(id -u)
+if [ $user -ne 0 ]
+then 
+  echo "you should run this script with root access"
+else
+  echo "you are running with root access"
+fi
