@@ -7,12 +7,12 @@ userid=$(id -u)
 mkdir -p /var/log/shell-script-logs
 log_folder="/var/log/shell-script-logs"
 name=$(echo $0 |cut -d "." -f1)
-log-file="$log_folder/$name.log"
+LOG_FILE="$log_folder/$name.log"
 
 if [ $userid -ne 0 ]
 then 
-  echo "$R Error: $N you should run this script with root access" &>>$log-file
+  echo "$R Error: $N you should run this script with root access" &>>$LOG_FILE
   exit 1
 else
-  echo "$G you are running with root access $N" &>>$log-file
+  echo "$G you are running with root access $N" &>>$LOG_FILE
 fi
