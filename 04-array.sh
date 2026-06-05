@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 movies=(court bahubali pushpa)
-echo "${movies[0]}"
+echo "${movies[9]}"
 echo "all movies are: ${movies[@]}"
