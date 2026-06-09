@@ -38,6 +38,7 @@ DAYS=${3:-14}
 
 USAGE(){
     echo -e " $R USAGE: $N sh 12-backup.sh <SOURCE_DIR> <DESTINATION_DIR> [DAYS(Optional, default: 14)]"
+    exit 1
 }
 
 if [ $# -lt 2 ]
