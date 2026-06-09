@@ -70,7 +70,7 @@ fi
 if [ -f $ZIP_FILE ]
 then
  echo -e "Zip file created $G successfully  $N" | tee -a $LOG_FILE
-    while IFS=read -r line
+    while IFS=read line
     do
         rm -rf $line
     done <<< $files
