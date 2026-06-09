@@ -37,7 +37,7 @@ DESTINATION_DIR=$2
 DAYS=${3:-14}
 
 USAGE(){
-    echo" $R USAGE: $N sh 12-backup.sh <SOURCE_DIR> <DESTINATION_DIR> [DAYS(Optional, default: 14)]"
+    echo -e " $R USAGE: $N sh 12-backup.sh <SOURCE_DIR> <DESTINATION_DIR> [DAYS(Optional, default: 14)]"
 }
 
 if [ $# -lt 2 ]
