@@ -57,7 +57,7 @@ then
 fi
 
 files=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
-if[ ! -z $files]
+if [ ! -z $files]
 then
   echo -e "No files older than $DAYS days found in $SOURCE_DIR. Nothing to backup or delete....$Y SKIPPING $N" | tee -a $LOG_FILE
 else 
