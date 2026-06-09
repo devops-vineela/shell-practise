@@ -8,8 +8,6 @@ LOGS_FOLDER="/var/log/roboshop-logs"
 SCRIPT_NAME=$(echo $0 |cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 mkdir -p $LOGS_FOLDER
-check_root
-
 # checks the user has root priviliges or not
 check_root(){
 if [ $userid -ne 0 ]
@@ -20,7 +18,7 @@ else
   echo -e "$G you are running with root access $N" | tee -a $LOG_FILE
 fi
 }
-
+check_root
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
