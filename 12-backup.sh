@@ -35,14 +35,25 @@ VALIDATE(){
 SOURCE_DIR=$1
 DESTINATION_DIR=$2
 DAYS=${3:-14}
+
+USAGE(){
+    echo" $R USAGE: $N sh 12-backup.sh <SOURCE_DIR> <DESTINATION_DIR> [DAYS(Optional, default: 14)]"
+}
+
+if [ $# -lt 2 ]
+then
+  USAGE()
+fi
 if [ ! -d $SOURCE_DIR ] 
 then 
   echo "Source Directory $SOURCE_DIR does not exist. Please check"
+  exit 1
 fi
 
 if [ ! -d $DESTINATION_DIR ]
 then 
   echo "Destination Directory $DESTINATION_DIR does not exist. Please check"
+  exit 1
 fi
 
 files=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
