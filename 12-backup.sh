@@ -42,8 +42,9 @@ USAGE(){
 
 if [ $# -lt 2 ]
 then
-  USAGE()
+  USAGE
 fi
+
 if [ ! -d $SOURCE_DIR ] 
 then 
   echo "Source Directory $SOURCE_DIR does not exist. Please check"
