@@ -72,7 +72,7 @@ then
  echo -e "Zip file created $G successfully  $N" | tee -a $LOG_FILE
     while IFS=read -r line
     do
-        rm -rf $files
+        rm -rf $line
     done <<< $files
     echo -e "$G files older than $DAYS days are deleted from $SOURCE_DIR $N" | tee -a $LOG_FILE
 fi
