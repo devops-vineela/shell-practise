@@ -65,8 +65,18 @@ else
   timestamp=$(date +%F-%H-%M-%S)
   ZIP_FILE="$DESTINATION_DIR/backup-$timestamp.zip"
   echo "$files" | zip -@ $ZIP_FILE
-  echo -e "$G files older than $DAYS days are deleted from $SOURCE_DIR $N" | tee -a $LOG_FILE
+ 
 fi
+if [-f $ZIP_FILE ]
+then
+ echo -e "Zip file created $G successfully  $N" | tee -a $LOG_FILE
+    while IFS=read -r line
+    do
+    rm -rf $files
+    done <<< $files
+    echo -e "$G files older than $DAYS days are deleted from $SOURCE_DIR $N" | tee -a $LOG_FILE
+fi
+
 
 
 
