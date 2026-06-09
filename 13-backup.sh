@@ -57,14 +57,14 @@ then
 fi
 
 files=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
-if [ -z $files ]
+if [ ! -z $files ]
 then
   echo -e "No files older than $DAYS days found in $SOURCE_DIR. Nothing to backup or delete....$Y SKIPPING $N" | tee -a $LOG_FILE
 else 
   echo -e "files are going to zip......: $files" | tee -a $LOG_FILE
   timestamp=$(date +%F-%H-%M-%S)
   ZIP_FILE="$DESTINATION_DIR/backup-$timestamp.zip"
-  echo "$files" | zip $ZIP_FILE
+  echo "$files" | zip -@ $ZIP_FILE
   echo -e "$G files older than $DAYS days are deleted from $SOURCE_DIR $N" | tee -a $LOG_FILE
 fi
 
